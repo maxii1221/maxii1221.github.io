@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="/fabric.min.js"></script>
+    
+    <title>Creador De Aros</title>
+</head>
+<body>
+    <main class="container">
+        <section id="header" class="header">
+            <h1 class="title-h1">CREADOR DE AROS</h1>
+        </section>
+        <section id="main" class="main">
+            <div class="main-selection">
+                <p class="regular-paragraph">Paso 1: Seleccione el modelo de Aro</p>
+                <select name="aros" id="aros" class="list-ring">
+                    <option value="modelo 1">modelo 1</option>
+                    <option value="modelo 2">modelo 2</option>
+                    <option value="modelo 3">modelo 3</option>
+                    <option value="modelo 4">modelo 4</option>
+                    <option value="modelo 5">modelo 5</option>
+                    <option value="modelo 6">modelo 6</option>
+                    <option value="modelo 7">modelo 7</option>
+                    <option value="modelo 8">modelo 8</option>
+                    <option value="modelo 9">modelo 9</option>
+                    <option value="modelo 10">modelo 10</option>
+                    <option value="modelo 11">modelo 11</option>
+                    <option value="modelo 12">modelo 12</option>
+                    <option value="modelo 13">modelo 13</option>
+                    <option value="modelo 14">modelo 14</option>
+                    <option value="modelo 15">modelo 15</option>
+                    <option value="modelo 16">modelo 16</option>
+                    <option value="modelo 17">modelo 17</option>
+                    <option value="modelo 18">modelo 18</option>
+                    <option value="modelo 19">modelo 19</option>
+                    <option value="modelo 20">modelo 20</option>
+                    <option value="modelo 21">modelo 21</option>
+                    <option value="modelo 22">modelo 22</option>
+                    <option value="modelo 23">modelo 23</option>
+                </select> 
+            </div>
+            <div class="main-selection">
+                <p class="regular-paragraph">Paso 2: Escriba el nombre o frase</p>
+                <input class="imput-texto-aro" type="text" id="texto-aro1">
+            </div>
+            <div class="main-selection">
+                <button id="vista-previa" class="button-selec">Aceptar</button>
+            </div>
+            <div class="view-ring">
+                <canvas id="MyCanvas"></canvas>
+            </div>
+            <div class="main-parrafo">
+                <p class="parrafo-explicacion">
+                    Esta Aplicacion es para que tengas referencia de como
+                    quedaria el aro, podria tener variantes al momento de cortarlo
+                    para que quede mejor el diseño, por ejemplo el punto de la "I"
+                    quedarian unidos a la letra, para que no se quede aparte.
+                </p>
+            </div>
+            <div id="section-botonselec" class="main-selection">
+                <button class="button-selec" id="descargar"><a id="abutton-descargar" class="link-button" href="">Descargar Imagen <span id="span-link-boton"></span></a></button>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/canvg@1.5.3/canvg.min.js"></script>
+    <script src="logica.js"></script>
+</body>
+</html>
