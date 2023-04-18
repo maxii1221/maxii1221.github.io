@@ -1,0 +1,156 @@
+@import url('https://fonts.cdnfonts.com/css/dulcelin');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+font-size: 62.5%;
+}
+
+.container {
+display: flex;
+max-width: 90rem;
+flex-wrap: wrap;
+border-radius: 2rem;
+background-color: #115959;
+}
+
+.header {
+width: 100%;
+min-width: 15rem;
+height: 12vh;
+background-color: #115959;
+box-shadow: 0rem 0.2rem 2rem 0rem #28363d;
+border-radius: 2rem 2rem 2rem 2rem;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+.title-h1 {
+font-family: 'Concert One', cursive;
+font-size: 3.4rem;
+color: #F2F2F2;
+text-align: center;
+letter-spacing: 0.6rem;
+}
+
+.main {
+width: 100%;
+min-width: 15rem;
+height: auto;
+border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.main-selection {
+width: 95%;
+min-width: 3rem;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+margin-top: 0.5rem;
+}
+
+#section-botonselec{
+width: 95%;
+min-width: 3rem;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+margin-top: 0.5rem;
+margin-bottom: 2rem;
+}
+
+.regular-paragraph {
+font-size: 2.0rem;
+color: #F2F2F2;
+font-family: 'Concert One', cursive;
+}
+
+.list-ring,
+.imput-texto-aro,
+.button-selec
+{
+width: 70%;
+min-width: 3rem;
+max-width: 30rem;
+height: 3rem;
+margin-top: 1.2rem;
+border-radius: 1rem;
+border: none;
+text-align: center;
+font-size: 2rem;
+font-family: 'Concert One', cursive;
+letter-spacing: 0.2rem;
+background-color: #F2F2F2;
+margin-left: 1rem
+}
+
+.list-ring:hover,
+.imput-texto-aro:hover,
+.button-selec:hover
+{
+background-color: #30F2CF;
+}
+
+.main-parrafo{
+    width: 95%;
+    min-width: 3rem;
+    max-width: 70rem;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.parrafo-explicacion{
+    color: #F2F2F2;
+    font-size: 2rem;
+    font-family: 'Concert One', cursive;
+    text-align: center;
+}
+
+.view-ring {
+width: 95%;
+min-width: 3rem;
+max-width: 68rem;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+margin-top: 2rem;
+background-color:#F2F2F2;
+border-radius: 1rem;
+}
+
+#MyCanvas {
+width: 100%;
+height: 29vh;
+}
+
+.link-button {
+text-decoration: none;
+text-decoration-color: none;
+color: #0A0C0D;
+}
