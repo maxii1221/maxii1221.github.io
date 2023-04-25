@@ -1,10 +1,21 @@
 //variables globales
 const botonAceptar = document.getElementById("vista-previa");
 botonAceptar.addEventListener("click", textoDeAro);
+
 const botonDescargar = document.getElementById("descargar");
-botonDescargar.addEventListener("click", descargarImagen)
+botonDescargar.addEventListener("click", descargarImagen);
+
+const botonEliminar = document.getElementById("icono-Eliminar");
+botonEliminar.addEventListener("click", eliminar);
 
 let inputListaDespegable = document.getElementById("aros");
+let modelo = document.getElementById("modelo");
+let textoss = document.getElementById("texto");
+let tamaño = document.getElementById("tamaño");
+let costo = document.getElementById("costo");
+let inputEscribaAqui1 = document.getElementById("texto-aro1").value;
+let valor = inputListaDespegable.value;
+
 
 // Obtén una referencia al lienzo de Fabric.js
 const lienzo = new fabric.Canvas('MyCanvas');
@@ -21,6 +32,10 @@ img.onload = function() {
     lienzo.setBackgroundImage(img.src, lienzo.renderAll.bind(lienzo));{
     }
 };
+
+function aleatorio(min, max){
+    return Math.floor(Math.random() * (max-min+1) + min)
+}
 
 //inicio de app
 function iniciarApp(){
@@ -103,10 +118,10 @@ function seleccionDeAro(){
             break;
     }
 
+    modelo.innerText = "Modelo de aro: " + valor;
 }
 
 function textoDeAro(){
-    
     //agregar textos fabric.js
     let inputEscribaAqui1 = document.getElementById("texto-aro1").value;
 
@@ -115,11 +130,14 @@ function textoDeAro(){
         top: 100,
         fontSize: 38,
         fontFamily: 'Dulcelin',
+        fontWeight: 'bold',
         fill: '#a56b31',
-        fontWeight: 'bold'
     });
-      
+
     lienzo.add(texto1);
+
+    elTextosAro = texto1.text
+    textoss.innerText = "texto de aro: " + elTextosAro + "...";
 
     //opcion de borrar con teclas del y supr fabric.js
     lienzo.on('selection:created', function(e) {
@@ -129,14 +147,23 @@ function textoDeAro(){
         lienzo.renderAll();
         }
     });
-        });
+        });   
+}
+
+function eliminar(){
+    lienzo.remove(lienzo.getActiveObject());
+    lienzo.renderAll();
 }
 
 function descargarImagen() {
+    let inputEscribaAqui1 = document.getElementById("texto-aro1").value;
+    let valor = inputListaDespegable.value;
+    let numero = aleatorio(1, 1000);
     let link = document.createElement('a');
     link.href = lienzo.toDataURL({format: 'png', quality: 0.8});
-    link.download = 'mi_imagen.png';
+    link.download = (valor +"-"+ inputEscribaAqui1 +"-"+ numero);
     link.click();
 }
+
 
 window.addEventListener("load", iniciarApp);
