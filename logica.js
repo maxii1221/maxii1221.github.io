@@ -10,7 +10,6 @@ botonEliminar.addEventListener("click", eliminar);
 
 let inputListaDespegable = document.getElementById("aros");
 let modelo = document.getElementById("modelo");
-let textoss = document.getElementById("texto");
 let tamaño = document.getElementById("tamaño");
 let costo = document.getElementById("costo");
 let inputEscribaAqui1 = document.getElementById("texto-aro1").value;
@@ -135,9 +134,6 @@ function textoDeAro(){
     });
 
     lienzo.add(texto1);
-
-    elTextosAro = texto1.text
-    textoss.innerText = "texto de aro: " + elTextosAro + "...";
 
     //opcion de borrar con teclas del y supr fabric.js
     lienzo.on('selection:created', function(e) {
