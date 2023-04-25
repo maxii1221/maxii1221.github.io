@@ -113,12 +113,20 @@ background-color: #30F2CF;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.h2-explicacion{
+    color: #F2F2F2;
+    font-size: 3rem;
+    font-family: 'Concert One', cursive;
+    text-align: center;
+    letter-spacing:0.2rem ;
 }
 
 .parrafo-explicacion{
@@ -153,4 +161,11 @@ height: 29vh;
 text-decoration: none;
 text-decoration-color: none;
 color: #0A0C0D;
+}
+
+.iconoEliminar {
+    width: 3rem;
+    height: auto;
+    margin: 1rem;
+    cursor: pointer;
 }
