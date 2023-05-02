@@ -8,11 +8,26 @@ botonDescargar.addEventListener("click", descargarImagen);
 const botonEliminar = document.getElementById("icono-Eliminar");
 botonEliminar.addEventListener("click", eliminar);
 
+const botonMenosSpasing = document.getElementById("icono-Restar");
+botonMenosSpasing.addEventListener("click", menosSpacing);
+
+
+const botonMasSpasing = document.getElementById("icono-Sumar");
+botonMasSpasing.addEventListener("click", masSpacing)
+
+
 let inputListaDespegable = document.getElementById("aros");
+let inputListaFuentes = document.getElementById("fuentes");
+let texto1;
+
+
 let modelo = document.getElementById("modelo");
 let tamaño = document.getElementById("tamaño");
 let costo = document.getElementById("costo");
+
 let inputEscribaAqui1 = document.getElementById("texto-aro1").value;
+
+
 let valor = inputListaDespegable.value;
 
 
@@ -124,32 +139,55 @@ function textoDeAro(){
     //agregar textos fabric.js
     let inputEscribaAqui1 = document.getElementById("texto-aro1").value;
 
-    let texto1 = new fabric.Text(inputEscribaAqui1, {
+    texto1 = new fabric.Text(inputEscribaAqui1, {
         left: 100,
-        top: 100,
-        fontSize: 38,
+        top: 100,      
         fontFamily: 'Dulcelin',
         fontWeight: 'bold',
+        fontSize: 38,
         fill: '#a56b31',
+        charSpacing: 0
     });
 
     lienzo.add(texto1);
 
+    inputListaFuentes.addEventListener("change", function() {
+        var fuente = inputListaFuentes.value;
+        texto1.set("fontFamily", fuente);
+        lienzo.renderAll();
+    })
+
     //opcion de borrar con teclas del y supr fabric.js
     lienzo.on('selection:created', function(e) {
-    document.addEventListener('keydown', function(evt) {
-        if (evt.key === 'Backspace' || evt.key === 'Delete') {
-        lienzo.remove(lienzo.getActiveObject());
-        lienzo.renderAll();
-        }
-    });
-        });   
+        document.addEventListener('keydown', function(evt) {
+            if (evt.key === 'Backspace' || evt.key === 'Delete') {
+            lienzo.remove(lienzo.getActiveObject());
+            lienzo.renderAll();
+            }
+        });
+    });        
 }
+
+function menosSpacing(){
+    let valorActual = texto1.get("charSpacing");
+    let nuevoValor = valorActual - 10;
+    texto1.set("charSpacing", nuevoValor);
+    lienzo.renderAll();
+};
+
+function masSpacing(){
+    let valorrActual = texto1.get("charSpacing");
+    let nuevooValor = valorrActual + 10;
+    texto1.set("charSpacing", nuevooValor);
+    lienzo.renderAll();
+};
+
 
 function eliminar(){
     lienzo.remove(lienzo.getActiveObject());
     lienzo.renderAll();
 }
+
 
 function descargarImagen() {
     let inputEscribaAqui1 = document.getElementById("texto-aro1").value;
@@ -163,3 +201,4 @@ function descargarImagen() {
 
 
 window.addEventListener("load", iniciarApp);
+
