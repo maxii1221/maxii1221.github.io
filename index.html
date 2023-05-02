@@ -18,6 +18,9 @@
         <section id="main" class="main">
             <div class="main-selection">
                 <p class="regular-paragraph">Paso 1: Seleccione el modelo de Aro</p>
+            </div>
+            <div class="main-selection3">
+                <img class="iconos" id="icono-izquierda" src="./pictures/izquierda.png" alt="icono de izquerda">
                 <select name="aros" id="aros" class="list-ring">
                     <option value="modelo 1">modelo 1</option>
                     <option value="modelo 2">modelo 2</option>
@@ -43,10 +46,24 @@
                     <option value="modelo 22">modelo 22</option>
                     <option value="modelo 23">modelo 23</option>
                 </select> 
+                <img class="iconos" id="icono-derecha" src="./pictures/derecha.png" alt="icono de derecha">
             </div>
             <div class="main-selection">
                 <p class="regular-paragraph">Paso 2: Escriba el nombre o frase</p>
                 <input class="imput-texto-aro" type="text" id="texto-aro1">
+            </div>
+            <div class="main-selection">
+                <p class="regular-paragraph">Paso 3: Seleccione el tipo de letra</p>
+                <select name="fuentes" id="fuentes" class="list-font">
+                    <option value="Dulcelin">Dulcelin</option>
+                    <option value="laughing and smiling">laughing</option>
+                    <option value="Billabong">Billabong</option>
+                    <option value="Minnie">Mickey</option>
+                    <option value="Cooper">Cooper</option>
+                    <option value="Clarendon">Clarendon</option>
+                    <option value="Krinkes">Krinkes</option>
+                    <option value="Candice">Candice</option>
+                </select> 
             </div>
             <div class="main-selection">
                 <button id="vista-previa" class="button-selec">Aceptar</button>
@@ -54,8 +71,14 @@
             <div class="view-ring">
                 <canvas id="MyCanvas"></canvas>
             </div>
-            <img class="iconoEliminar" id="icono-Eliminar" src="./pictures/borrar.png" alt="icono de eliminar">
-            <h2 class="h2-explicacion">Detalles Del aro</h2>
+            <div class="main-selection2">
+                <img class="iconoEliminar" id="icono-Eliminar" src="./pictures/borrar.png" alt="icono de eliminar">              
+                <p class="parrafo-explicacion2">espacio entre letra</p>
+                <img class="iconosspacing" id="icono-Restar" src="./pictures/-.png" alt="icono de restar">
+                <img class="iconosspacing" id="icono-Sumar" src="./pictures/+.png" alt="icono de sumar">
+            </div>          
+            <h2 class="h2-explicacion">DETALLES DEL ARO
+            </h2>
             <div class="main-parrafo">
                 <span class="parrafo-explicacion" id="modelo">modelo de aro: Modelo 1 </span>
                 <span class="parrafo-explicacion" id="tamaño">Tamaño: 60 Cm </span>
