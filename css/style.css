@@ -57,7 +57,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 margin: 0 auto;
-margin-top: 0.5rem;
+
 }
 
 .main-selection2 {
@@ -122,7 +122,7 @@ font-size: 2rem;
 font-family: 'Concert One', cursive;
 letter-spacing: 0.2rem;
 background-color: #F2F2F2;
-margin-left: 1rem
+
 }
 
 .list-ring{
